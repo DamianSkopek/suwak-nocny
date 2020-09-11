@@ -1,0 +1,62 @@
+
+
+:root{
+    --light: 0.2;
+    --glow: 10px;
+    --bulbColor: #00f8ecef;
+
+}
+
+html{
+    font-size:15px;
+    font-family: "Monda", sans-serif;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    background-image: url('noc.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+.night{
+    height: 100vh;
+    background: black;
+    /* calc() - pozwala na wstawianie obliczeń */
+    opacity: calc(1 - var(--light));
+}
+
+.neon{
+    font-size: 4rem;
+    color: var(--bulbColor);
+    position: absolute;
+    bottom: 3%;
+    left: 5%;
+    letter-spacing: .3rem;
+    text-shadow: rgba(255,255,255, 0.3) 0 0 calc(5 * var(--glow)), var(--bulbColor) 0 0 var(--glow);
+    opacity: var(--light);
+}
+
+.far {
+    font-size: 8rem;
+    letter-spacing: 2rem;
+}
+
+input{
+    position: absolute;
+    width:300px;
+    height:80px;
+    top:3%;
+    left:5%;
+}
+
+@media(max-width: 700px){
+    html{
+        font-size: 8px;
+    }
+    input{
+        width: 200px;
+    }
+}
