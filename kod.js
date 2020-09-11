@@ -1,4 +1,5 @@
 
+
 const input = document.querySelector('input')
 input.addEventListener("change", updateValue)
 input.addEventListener('mousemove', updateValue)
